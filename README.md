@@ -1,69 +1,89 @@
 <a id="readme-top"></a>
 
-<img width="100%" alt="Kim Juyoung header" src="https://capsule-render.vercel.app/api?type=waving&color=0:27384F,100:F26B7A&height=220&section=header&text=Kim%20Juyoung&fontSize=46&fontColor=ffffff&fontAlignY=40&animation=fadeIn&desc=사용자의%20흐름과%20운영의%20안정성을%20함께%20설계하는%20개발자&descSize=17&descAlignY=62&descAlign=50&descFontColor=ffffff" />
+<img width="100%" alt="Kim Juyoung" src="https://capsule-render.vercel.app/api?type=waving&color=0:B8BEC7,48:E8E5DA,100:C9A84C&height=190&section=header&text=Kim%20Juyoung&fontSize=42&fontColor=2F3440&fontAlignY=38&desc=Full-stack%20Developer&descSize=17&descAlignY=60&descFontColor=4B4F57" />
 
 <div align="center">
-
+  <h3>기능을 연결하고, 경계를 단단하게 만드는 개발자 김주영입니다.</h3>
   <p>
-    <img
-      alt="Full-stack developer introduction"
-      src="https://readme-typing-svg.demolab.com?font=Pretendard&weight=600&size=22&pause=1200&color=C8596A&center=true&vCenter=true&width=760&lines=Build+the+flow.+Secure+the+experience.;Frontend+to+Backend%2C+Real-time+to+Performance."
-    />
+    화면에서 시작된 문제를 API, 인증, 트랜잭션과 DB까지 추적합니다.<br/>
+    구현 여부보다 <b>여러 사용자가 안정적으로 사용할 수 있는 상태</b>를 중요하게 생각합니다.
   </p>
-
-  <p>
-    안녕하세요, <b>프론트엔드의 사용자 경험부터 백엔드의 안정성과 성능까지</b><br/>
-    서비스 전체 흐름을 연결해 문제를 해결하는 개발자 <b>김주영</b>입니다.
-  </p>
-
-  <p>
-    <a href="https://github.com/JuyoungKim1024"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-JuyoungKim1024-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  </p>
-
+  <a href="https://github.com/JuyoungKim1024"><img alt="GitHub JuyoungKim1024" src="https://img.shields.io/badge/GitHub-JuyoungKim1024-181717?style=flat-square&logo=github&logoColor=white" /></a>
 </div>
 
 ---
 
-## 👋 About Me
+## Core Skills
 
-기능을 만드는 데서 끝내지 않고, 실제 사용자가 여러 화면과 브라우저에서 같은 상태를 보게 되는지까지 확인합니다. 문제를 발견하면 프론트엔드 상태 관리, API 계약, 인증·인가, 트랜잭션, 데이터베이스 쿼리와 배포 설정을 함께 추적하며 원인을 좁힙니다.
+### 1. 프론트엔드부터 DB까지 원인을 추적합니다
 
-- Next.js와 Spring Boot를 함께 다루는 **풀스택 개발**을 지향합니다.
-- 여행방 협업 기능의 **실시간 동기화와 권한 경계**를 안정적으로 설계했습니다.
-- 보안, 동시성, 성능처럼 기능 이후에 드러나는 문제를 측정하고 개선하는 데 관심이 많습니다.
-- 테스트와 모니터링 결과를 근거로 수정하고, 회귀 오류가 없도록 검증합니다.
+단순 UI 오류로 보이는 문제도 상태 관리, API 응답, 권한 검사와 쿼리 흐름을 함께 확인합니다. Next.js와 Spring Boot 양쪽을 직접 수정하며 계층 사이에서 발생하는 오류를 해결할 수 있습니다.
 
-```text
-사용자 흐름 파악 → 재현 가능한 문제 정의 → 계층별 원인 추적
-→ 최소 범위 수정 → 자동화 테스트와 관제 지표로 교차 검증
-```
+**검증된 경험**
 
-## 🧰 Tech Stack
+- 북마크 일정 복사 흐름을 화면 이벤트부터 목적지 데이터 저장까지 연결
+- 완료 상태, 게스트 전환, 여행방 역할에 따른 프론트·백엔드 동작 일치
+- 목록 조회 페이지네이션과 반복 DB 조회 개선
 
-### Frontend
+### 2. 실시간 기능을 데이터 일관성 관점에서 다룹니다
 
-<p>
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-  <img alt="React" src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-  <img alt="Zustand" src="https://img.shields.io/badge/Zustand-443E38?style=flat-square" />
-</p>
+WebSocket 연결 자체보다 인증, 구독 시점, 중복 이벤트와 권한 경계를 함께 설계합니다. 여러 브라우저에서 댓글, 투표, 일정과 정산 상태가 새로고침 없이 동일하게 보이도록 개선했습니다.
 
-### Backend & Data
+**검증된 경험**
+
+- STOMP 연결 인증과 여행방 단위 메시지 권한 검증
+- 이벤트 누락, 중복 반영과 재연결 상태 안정화
+- 장소, 투표, 일정, 접속 상태와 지출 정산 실시간 동기화
+
+### 3. 보안을 설정이 아닌 서비스 흐름으로 검증합니다
+
+Spring Security 설정만으로 끝내지 않고 서비스 계층의 소유권과 역할 검사까지 확인합니다. 인증 실패와 권한 부족을 구분하고, 토큰·쿠키·WebSocket 진입점별 공격 표면을 점검합니다.
+
+**검증된 경험**
+
+- 분산된 여행방 인가 로직을 서비스 계층으로 일원화
+- 쿠키 인증 Origin 검증과 WebSocket 메시지 권한 강화
+- 내부 예외 노출, 보안 헤더, 운영 엔드포인트 공개 범위 보완
+
+### 4. 측정 결과를 근거로 성능을 개선합니다
+
+k6로 실제 사용자 흐름을 재현하고 Prometheus와 Grafana에서 API 지연, HikariCP 대기, CPU와 GC를 같은 시간축으로 분석합니다. 풀 크기만 늘리지 않고 쿼리 횟수와 커넥션 점유 원인을 먼저 확인합니다.
+
+**검증된 경험**
+
+- 최대 1,000 VU 부하 테스트 시나리오와 테스트 데이터 구성
+- HikariCP 포화 구간 식별 및 환경별 풀 설정 개선
+- 반복 조회 제거, DTO 조회, 페이지네이션과 인덱스 적용
+
+## Evidence
+
+| 역량 | 대표 작업 |
+| --- | --- |
+| 실시간 동기화 | [여행방 실시간 동기화 및 인증 안정화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/9f0eb87) |
+| 인증·인가 | [여행방 인가 검사를 서비스 계층으로 일원화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/217d804) |
+| 보안 | [WebSocket 여행방 메시지 권한 검증 강화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/a8a6a16) |
+| 성능 | [DB 커넥션 풀 병목 완화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/441949d) |
+| 부하 테스트 | [실서비스형 부하 테스트 시나리오 추가](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/3820769) |
+| 풀스택 문제 해결 | [북마크 일정 담기 동작 연결](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/364cff1) |
+
+## Tech Stack
 
 <p>
   <img alt="Java" src="https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
   <img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
   <img alt="Spring Security" src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" />
-  <img alt="JPA" src="https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square" />
+  <img alt="JPA" src="https://img.shields.io/badge/JPA-59666C?style=flat-square" />
   <img alt="WebSocket" src="https://img.shields.io/badge/STOMP_WebSocket-010101?style=flat-square" />
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL_8.4-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-  <img alt="Redis" src="https://img.shields.io/badge/Redis_7.4-DC382D?style=flat-square&logo=redis&logoColor=white" />
-  <img alt="Flyway" src="https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white" />
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
 </p>
 
-### Infra, Test & Monitoring
+<p>
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+</p>
 
 <p>
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
@@ -74,46 +94,8 @@
   <img alt="Grafana" src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" />
 </p>
 
-## 🚀 What I Built
-
-### Plamingo — AI 기반 공동 여행 계획 서비스
-
-> 장소 탐색, 투표, 날짜 조율, Day별 동선, 지출 정산과 여행 기록을 하나의 협업 흐름으로 연결한 3인 팀 프로젝트
-
-| 영역 | 주요 기여 |
-| --- | --- |
-| 실시간 협업 | STOMP WebSocket 기반 장소, 댓글, 투표, 일정, 접속 상태와 지출 정산 동기화 안정화 |
-| 인증·인가 | JWT 세션 복구, WebSocket 인증, Origin 검증, 여행방 상태·역할별 권한과 서비스 계층 인가 일원화 |
-| 여행 의사결정 | 장소 찬반·A/B 투표, 탈락 이력, 지도 포커스, 날짜 제안과 완료 여행방 상태 처리 |
-| 일정·AI | Day 일정 편집, Routes 이동시간, 동선 양끝 장소 추천, OpenAI 재정렬과 폴백 흐름 개선 |
-| 관리자·운영 | 관리자 OTP 로그인, 회원 정지, 문의, 외부 API 사용량, 커버 이미지와 감사 로그 구현 |
-| 품질·성능 | 보안 헤더와 예외 노출 보완, DB 페이지네이션·쿼리 최적화, k6 1,000 VU 부하 테스트와 Grafana 관제 구성 |
-
-## 🔍 Problem Solving Highlights
-
-### 1. 새로고침 없이 일관된 협업 상태 만들기
-
-장소 등록, 댓글, 투표와 정산 결과가 브라우저마다 다르게 보이던 문제를 프론트엔드 구독 수명주기와 백엔드 STOMP 권한 검증 양쪽에서 추적했습니다. 이벤트 누락과 중복 반영을 분리해 처리하고, 여행방 단위 메시지 권한을 서버에서 검증하도록 보완했습니다.
-
-### 2. 인증과 권한을 기능 흐름 안에서 안정화하기
-
-세션 복구 과정의 불필요한 `401` 응답, 게스트에서 회원으로 전환할 때의 권한 불일치, 완료된 여행방의 기능별 접근 규칙을 정리했습니다. 화면 차단에 의존하지 않고 백엔드 서비스 계층에서 권한을 일관되게 검증했습니다.
-
-### 3. 측정값으로 DB 병목 개선하기
-
-k6 실제 사용자 흐름 시나리오와 Prometheus/Grafana 대시보드를 구성해 HikariCP 커넥션 대기와 API 지연을 함께 관찰했습니다. 반복 조회와 페이지네이션을 개선하고 인덱스와 풀 설정을 환경별로 반영한 뒤 동일한 시나리오로 회귀 검증했습니다.
-
-## 📊 GitHub
-
-<div align="center">
-  <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=JuyoungKim1024&show_icons=true&hide_border=true&title_color=C8596A&icon_color=F26B7A&text_color=27384F&bg_color=ffffff" />
-  <img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuyoungKim1024&layout=compact&hide_border=true&title_color=C8596A&text_color=27384F&bg_color=ffffff" />
-</div>
-
 ---
 
 <div align="center">
-  <b>사용자가 자연스럽게 쓰고, 운영자가 안심할 수 있는 서비스를 만들겠습니다.</b><br/><br/>
-  <a href="#readme-top">맨 위로</a>
+  <b>문제를 끝까지 추적하고, 수정 결과를 검증하는 개발자가 되겠습니다.</b>
 </div>
-
