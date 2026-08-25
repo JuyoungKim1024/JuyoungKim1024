@@ -1,12 +1,12 @@
 <a id="readme-top"></a>
 
-<img width="100%" alt="Kim Juyoung" src="https://capsule-render.vercel.app/api?type=waving&color=0:B8BEC7,48:E8E5DA,100:C9A84C&height=190&section=header&text=Kim%20Juyoung&fontSize=42&fontColor=2F3440&fontAlignY=38&desc=Full-stack%20Developer&descSize=17&descAlignY=60&descFontColor=4B4F57" />
+<img width="100%" alt="Kim Juyoung" src="https://capsule-render.vercel.app/api?type=waving&color=0:B8BEC7,48:E8E5DA,100:C9A84C&height=190&section=header&text=Kim%20Juyoung&fontSize=42&fontColor=2F3440&fontAlignY=38&desc=Backend%20Developer&descSize=17&descAlignY=60&descFontColor=4B4F57" />
 
 <div align="center">
-  <h3>기능을 연결하고, 경계를 단단하게 만드는 개발자 김주영입니다.</h3>
+  <h3>비즈니스 흐름을 안정적인 서버 구조로 구현하는 백엔드 개발자 김주영입니다.</h3>
   <p>
-    화면에서 시작된 문제를 API, 인증, 트랜잭션과 DB까지 추적합니다.<br/>
-    구현 여부보다 <b>여러 사용자가 안정적으로 사용할 수 있는 상태</b>를 중요하게 생각합니다.
+    API 요청부터 인증·인가, 트랜잭션과 데이터베이스까지 흐름 전체를 추적합니다.<br/>
+    백엔드를 중심으로 설계하되, 프론트엔드까지 직접 연결해 <b>사용자 흐름 전체를 검증</b>할 수 있습니다.
   </p>
   <a href="https://github.com/JuyoungKim1024"><img alt="GitHub JuyoungKim1024" src="https://img.shields.io/badge/GitHub-JuyoungKim1024-181717?style=flat-square&logo=github&logoColor=white" /></a>
 </div>
@@ -15,15 +15,15 @@
 
 ## Core Skills
 
-### 1. 프론트엔드부터 DB까지 원인을 추적합니다
+### 1. 백엔드를 중심으로 기능의 끝까지 책임집니다
 
-단순 UI 오류로 보이는 문제도 상태 관리, API 응답, 권한 검사와 쿼리 흐름을 함께 확인합니다. Next.js와 Spring Boot 양쪽을 직접 수정하며 계층 사이에서 발생하는 오류를 해결할 수 있습니다.
+사용자 행동을 도메인 규칙으로 구체화하고 Controller, Service, Repository의 책임을 분리합니다. 필요한 경우 Next.js 화면과 상태 관리까지 직접 수정해 API 계약이 실제 사용자 경험으로 정확히 이어지는지 확인합니다.
 
 **검증된 경험**
 
-- 북마크 일정 복사 흐름을 화면 이벤트부터 목적지 데이터 저장까지 연결
-- 완료 상태, 게스트 전환, 여행방 역할에 따른 프론트·백엔드 동작 일치
-- 목록 조회 페이지네이션과 반복 DB 조회 개선
+- 여행방 상태와 멤버 역할에 따른 생성·수정·조회 권한 일원화
+- 게스트에서 회원으로 전환되는 과정의 데이터 및 권한 정합성 보완
+- 일정 복사, 투표와 정산의 API부터 화면 반영까지 연결
 
 ### 2. 실시간 기능을 데이터 일관성 관점에서 다룹니다
 
@@ -64,9 +64,11 @@ k6로 실제 사용자 흐름을 재현하고 Prometheus와 Grafana에서 API �
 | 보안 | [WebSocket 여행방 메시지 권한 검증 강화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/a8a6a16) |
 | 성능 | [DB 커넥션 풀 병목 완화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/441949d) |
 | 부하 테스트 | [실서비스형 부하 테스트 시나리오 추가](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/3820769) |
-| 풀스택 문제 해결 | [북마크 일정 담기 동작 연결](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/364cff1) |
+| 도메인 연동 | [북마크 일정 담기 동작 연결](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/364cff1) |
 
 ## Tech Stack
+
+### Backend — Main
 
 <p>
   <img alt="Java" src="https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
@@ -78,12 +80,17 @@ k6로 실제 사용자 흐름을 재현하고 Prometheus와 Grafana에서 API �
   <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
 </p>
 
+### Frontend — Can Build & Integrate
+
 <p>
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
   <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+  <img alt="Zustand" src="https://img.shields.io/badge/Zustand-443E38?style=flat-square" />
 </p>
+
+### Infra, Performance & Monitoring
 
 <p>
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
