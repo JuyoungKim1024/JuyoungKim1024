@@ -5,7 +5,7 @@
 <div align="center">
   <h3>비즈니스 흐름을 안정적인 서버 구조로 구현하는 백엔드 개발자 김주영입니다.</h3>
   <p>
-    API 요청부터 인증·인가, 트랜잭션과 데이터베이스까지 흐름 전체를 추적합니다.<br/>
+    API 요청부터 인증과 인가, 트랜잭션과 데이터베이스까지 흐름 전체를 추적합니다.<br/>
     백엔드를 중심으로 설계하되, 프론트엔드까지 직접 연결해 <b>사용자 흐름 전체를 검증</b>할 수 있습니다.
   </p>
   <a href="https://github.com/JuyoungKim1024"><img alt="GitHub JuyoungKim1024" src="https://img.shields.io/badge/GitHub-JuyoungKim1024-181717?style=flat-square&logo=github&logoColor=white" /></a>
@@ -17,27 +17,27 @@
 
 ### 1. 백엔드를 중심으로 기능의 끝까지 책임집니다
 
-사용자 요구사항을 도메인 규칙으로 구체화하고 Controller, Service, Repository의 책임을 분리합니다. 필요한 경우 Next.js 화면과 상태 관리까지 직접 수정해 API 계약이 실제 사용자 경험으로 정확히 이어지는지 확인합니다.
+요구사항을 도메인 규칙으로 구체화하고 계층별 책임을 분리합니다. 필요한 경우 화면까지 수정해 API 동작을 끝까지 검증합니다.
 
 **검증된 경험**
 
-- 역할과 리소스 상태에 따른 생성·조회·수정 권한 모델링
+- 역할과 리소스 상태를 반영한 접근 권한 설계
 - 비회원에서 회원으로 전환되는 인증 수명주기와 데이터 정합성 처리
-- 여러 도메인에 걸친 기능을 API 설계부터 화면 상태 반영까지 연결
+- API 설계부터 화면 상태 반영까지 기능 연결
 
 ### 2. 실시간 기능을 데이터 일관성 관점에서 다룹니다
 
-WebSocket 연결 자체보다 인증, 구독 시점, 중복 이벤트와 권한 경계를 함께 설계합니다. 여러 클라이언트에서 생성·수정·집계 결과가 새로고침 없이 동일하게 보이도록 개선했습니다.
+연결뿐 아니라 인증, 구독 시점, 중복 이벤트와 권한까지 설계합니다. 여러 클라이언트가 같은 상태를 보도록 보장합니다.
 
 **검증된 경험**
 
-- STOMP 연결 인증과 채널·리소스 단위 메시지 권한 검증
+- STOMP 연결 인증과 메시지 권한 검증
 - 이벤트 누락, 중복 반영과 재연결 상태 안정화
 - 댓글, 투표, 작업 상태, 접속 현황과 집계 데이터 실시간 동기화
 
 ### 3. 보안을 설정이 아닌 서비스 흐름으로 검증합니다
 
-Spring Security 설정만으로 끝내지 않고 서비스 계층의 소유권과 역할 검사까지 확인합니다. 인증 실패와 권한 부족을 구분하고, REST API·쿠키·WebSocket 진입점별 공격 표면을 점검합니다.
+Spring Security와 서비스 계층에서 역할과 소유권을 검증합니다. REST API, 쿠키, WebSocket의 보안 경계를 함께 점검합니다.
 
 **검증된 경험**
 
@@ -47,21 +47,22 @@ Spring Security 설정만으로 끝내지 않고 서비스 계층의 소유권�
 
 ### 4. 측정 결과를 근거로 성능을 개선합니다
 
-k6로 실제 사용자 흐름을 재현하고 Prometheus와 Grafana에서 API 지연, HikariCP 대기, CPU와 GC를 같은 시간축으로 분석합니다. 풀 크기만 늘리지 않고 쿼리 횟수와 커넥션 점유 원인을 먼저 확인합니다.
+k6로 부하를 재현하고 Grafana에서 API, DB, CPU와 GC 지표를 함께 분석합니다. 측정 결과로 병목 원인을 찾습니다.
 
 **검증된 경험**
 
 - 최대 1,000 VU의 실제 사용자 흐름 기반 부하 테스트 구성
 - HikariCP 포화 구간 식별 및 환경별 풀 설정 개선
-- N+1·반복 조회 제거, DTO Projection, 페이지네이션과 복합 인덱스 적용
+- N+1과 반복 조회 제거
+- DTO Projection, 페이지네이션과 복합 인덱스 적용
 
 ## Evidence
 
 | 역량 | 구현 및 검증 경험 |
 | --- | --- |
 | 실시간 시스템 | [다중 클라이언트 상태 동기화와 연결 인증 안정화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/9f0eb87) |
-| 인증·인가 | [분산된 리소스 접근 검사를 서비스 계층으로 일원화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/217d804) |
-| WebSocket 보안 | [메시지 발행 시 사용자·리소스 권한 검증 강화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/a8a6a16) |
+| 인증과 인가 | [분산된 리소스 접근 검사를 서비스 계층으로 일원화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/217d804) |
+| WebSocket 보안 | [메시지 발행 시 사용자와 리소스 권한 검증 강화](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/a8a6a16) |
 | 데이터베이스 성능 | [쿼리 구조와 DB 커넥션 풀 병목 개선](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/441949d) |
 | 성능 검증 | [실제 사용자 흐름 기반 부하 테스트 시나리오 구축](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/3820769) |
 | 클라이언트 연동 | [API 데이터와 화면 상태를 연결한 기능 구현](https://github.com/prgrms-aibe-devcourse/AIBE6_FinalProject_Team01/commit/364cff1) |
